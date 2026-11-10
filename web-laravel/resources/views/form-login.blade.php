@@ -3,52 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Sistem Pembayaran SPP</title>
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: system-ui, -apple-system, sans-serif; background-color: #f1f5f9; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
-        .login-card { background: #ffffff; width: 100%; max-width: 420px; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; }
-        .login-header { text-align: center; margin-bottom: 2rem; }
-        .login-header h2 { font-size: 1.5rem; color: #0f172a; font-weight: 700; margin-bottom: 0.5rem; }
-        .login-header p { font-size: 0.875rem; color: #64748b; }
-        .form-group { margin-bottom: 1.25rem; }
-        .form-label { display: block; font-size: 0.875rem; font-weight: 600; color: #334155; margin-bottom: 0.5rem; }
-        .form-input { width: 100%; padding: 0.65rem 0.85rem; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.95rem; }
-        .form-input:focus { outline: none; border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37,99,235,0.15); }
-        .error-feedback { color: #dc2626; font-size: 0.775rem; margin-top: 0.35rem; }
-        .btn-submit { width: 100%; background: #2563eb; color: #fff; padding: 0.75rem; border: none; border-radius: 6px; font-weight: 600; font-size: 0.95rem; cursor: pointer; margin-top: 0.5rem; }
-        .btn-submit:hover { background: #1d4ed8; }
-        .form-check { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.25rem; font-size: 0.875rem; color: #64748b; }
-    </style>
+    <title>Login Petugas - SPP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="login-card">
-        <div class="login-header">
-            <h2>Masuk ke Sistem</h2>
-            <p>Sistem Informasi Pembayaran SPP Siswa</p>
+<body class="bg-slate-100 min-h-screen flex items-center justify-center p-4">
+    <div class="w-full max-w-md bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
+        <div class="text-center mb-6">
+            <h1 class="text-2xl font-bold text-slate-900 tracking-tight">Login Portal SPP</h1>
+            <p class="text-sm text-slate-500 mt-1">Masukkan akun petugas untuk memulai layanan</p>
         </div>
 
-        <form action="#" method="POST">
-            <div class="form-group">
-                <label for="username" class="form-label">Username</label>
-                <input type="text" name="username" id="username" class="form-input" 
+        <form action="#" method="POST" class="space-y-4">
+            <div>
+                <label for="username" class="block text-sm font-medium text-slate-700 mb-1">Username</label>
+                <input type="text" name="username" id="username" 
+                       class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
                        placeholder="Masukkan username" required autofocus>
                 <!-- Tampilan Pesan Validasi Error -->
-                <div class="error-feedback">Username atau kata sandi tidak cocok.</div>
+                <p class="text-xs text-red-600 mt-1">Kredensial username atau kata sandi tidak cocok.</p>
             </div>
 
-            <div class="form-group">
-                <label for="password" class="form-label">Kata Sandi</label>
-                <input type="password" name="password" id="password" class="form-input" 
+            <div>
+                <label for="password" class="block text-sm font-medium text-slate-700 mb-1">Kata Sandi</label>
+                <input type="password" name="password" id="password" 
+                       class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
                        placeholder="Masukkan kata sandi" required>
             </div>
 
-            <div class="form-check">
-                <input type="checkbox" name="remember" id="remember">
-                <label for="remember">Ingat sesi saya</label>
+            <div class="flex items-center">
+                <input type="checkbox" name="remember" id="remember" class="h-4 w-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                <label for="remember" class="ml-2 block text-xs text-slate-600">Ingat sesi login saya</label>
             </div>
 
-            <button type="submit" class="btn-submit">Masuk Sekarang</button>
+            <button type="submit" 
+                    class="w-full py-2.5 px-4 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm shadow-sm transition">
+                Masuk ke Sistem
+            </button>
         </form>
     </div>
 </body>

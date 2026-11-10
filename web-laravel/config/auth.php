@@ -1,7 +1,7 @@
 <?php
 
 use App\Models\User;
-
+use App\Models\Petugas;
 return [
 
     /*
