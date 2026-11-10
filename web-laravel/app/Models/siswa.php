@@ -7,10 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 class siswa extends Model
 {
         protected $fillable = [
-        'id',
-        'tahun',
-        'nominal',
-        'keterangan',
+        'id_siswa',
+        'nis',
+        'nama',
+        'id_kelas',
+        'alamat',
+        'no_telp',
+        'id_spp',
         'created_at',
         'updated_at'
     ];
